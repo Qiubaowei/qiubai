@@ -3,7 +3,6 @@
         <div class="title">
             糗事百科
         </div>
-        <img src="../assets/backpic.jpg">
     </div>
 </template>
 
@@ -12,9 +11,9 @@
     .home {
         width: 100%;
         height: 100%;
-        /*background: url("./../asserts/backpic.jpg");*/
-        background-size: 100%; 
-        background-color:bisque;
+        background: url("./../assets/backpic.jpg") no-repeat;
+        background-size: 100%;
+        /*background-color:bisque;*/
     }
     .title {
         color: springgreen;
