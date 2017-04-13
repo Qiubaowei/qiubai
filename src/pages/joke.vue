@@ -1,7 +1,9 @@
 <template>
     <div class="joke-content">
         <div class="joke-title">内涵段子</div>
-        <div> {{data.content}} </div>
+        <div class='content-item' v-for='item in data'>
+            {{item.content}}
+        </div>
     </div>
 </template>
 
@@ -21,8 +23,8 @@ export default {
             }
         })
         .then(function (response) {
-            console.log(response.data.result[0]);
-            that.data = response.data.result[0]
+            console.log(response.data.result);
+            that.data = response.data.result
         })
         .catch(function (error) {
             console.log(error);
@@ -32,7 +34,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
     .joke-content {
         margin: 0;
@@ -49,5 +51,9 @@ export default {
         background: #000;
         line-height: 40px;
         font-family: cursive;
+    }
+    .content-item {
+        padding: 10px 10px;
+        border-bottom: 1px solid #cdcdcd;
     }
 </style>
